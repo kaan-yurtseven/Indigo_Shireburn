@@ -1,7 +1,7 @@
 **Full Name :**
 Kaan YURTSEVEN
 **Project Title :**
-CASE STUDY – Template
+CASE STUDY – SHIREBURN
 **Installation guide:**
 This is a maven project. so It's assumed that the host running this code have Java and maven installed and JAVA_HOME already set.
 Here is the guide for maven installation just in case : https://maven.apache.org/install.htmlProject get all dependencies from maven repository. So no additional installation needed.
