@@ -11,7 +11,8 @@ cucumber-junit,
 Selenium Webdriver,
 Bonigarcia Webdrivermanager
  **Credentials :**
-No Credentials required for the project.
+Username = IntQA20
+Password = Oy88402142.
 **Build and run your project :**
 This is maven project and tests are written in JUnit . So we use maven command line commands to run the project as below to pick up JUnit tests:  
 mvn clean testFramework can be built with using TestNg or Cucumber BDD but preferred to use Junit.
