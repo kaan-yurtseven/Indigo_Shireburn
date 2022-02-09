@@ -50,7 +50,7 @@ public class TaxProfile_steps {
     @When("user clicks the add button")
     public void user_clicks_the_add_button() {
         BrowserUtils.waitForClickablility(taxProfilePage.addButton,2500).click();
-        //taxProfilePage.addButton.click();
+        taxProfilePage.addButton.click();
 
     }
 
@@ -73,6 +73,7 @@ public class TaxProfile_steps {
 
     @Then("Verify the error message")
     public void verify_the_error_message() {
+        Driver.waitFor(1);
         taxProfilePage.errorPopUp.isDisplayed();
      }
 

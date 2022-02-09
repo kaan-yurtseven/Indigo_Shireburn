@@ -36,15 +36,17 @@ Feature: Tax Profile Page
     Then Verify the error message
 
   Scenario Outline: Delete Tax Profile Menu
-
+    When user clicks the add button
+    And user enter some "<Tax profile data>","<Tax profile description>","<FSS Status>","<Tax on annual gross>"
+    And user enters the accept button
     And User selects this "<Tax profile data>" and deletes it.
     Then Verify the error message
 
     Examples:
-      | Tax profile data |
-      | KAAN110       |
-      | KAAN20            |
-      | KAAN30            |
+      | Tax profile data | Tax profile description | FSS Status    | Tax on annual gross |
+      | KAAN110         | FSS MAIN METHOD         | FSS MAIN      | CHECKED             |
+      | KAAN20           | SPECIAL TAX             | FSS MAIN      | UNCHECKED           |
+      | KAAN30           | PARENT TAX              | FSS PART TIME | CHECKED             |
 
     @Add
   Scenario Outline: Add Tax Profile Menu
@@ -58,16 +60,6 @@ Feature: Tax Profile Page
     | KAAN20           | SPECIAL TAX             | FSS MAIN      | UNCHECKED           |
       | KAAN30           | PARENT TAX              | FSS PART TIME | CHECKED             |
 
-  Scenario Outline: Delete Tax Profile Menu
-
-    And User selects this "<Tax profile data>" and deletes it.
-    Then Verify the error message
-
-    Examples:
-      | Tax profile data |
-      | KAAN110       |
-      | KAAN20            |
-      | KAAN30            |
 
   Scenario Outline: Add Tax Profile Menu with same code name
     When user clicks the add button
